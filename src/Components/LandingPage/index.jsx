@@ -8,3 +8,7 @@ export default function LandingComponents() {
   )
 }
 
+//! 'export default function' sama 'function' aja apa bedanya?
+// component adalah segala sesuatu yg dibutuh didalam pages,
+// jika home/container adalah boxnya, component adalah barang yg ada didalamnya
+// container,landingPage sama seperti HOME didalam page
