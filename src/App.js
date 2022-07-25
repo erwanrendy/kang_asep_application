@@ -1,26 +1,26 @@
 // import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingComponents from './src/Components';
-import About from './src/Pages/About';
+import About from './Pages/About';
 import History from './Pages/History';
-import Home from './Pages/Home';
+import HomePage from './Pages/Home';
 import Profile from './Pages/Profile';
 import Error from './Pages/Error';
 
 
 function App() {
   return (
-    <router>
-      <routes>
-        <route path='/' element={<Home />} />
-        <route path='/about' element={<About />} />
-        <route path='/history' element={<History />} />
-        <route path='/home' element={<Home />} />
-        <route path='/profile' element={<Profile />} /> 
-        <route path='*' element={<err />} />  
-      </routes>
-    </router>
+    <Router>
+      <Routes>
+        <Route path='/' element={<HomePage />} >
+        <Route index element={<HomePage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/history' element={<History />} />
+          <Route path='/profile' element={<Profile />} /> 
+          <Route path='*' element={<err />} />  
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 
