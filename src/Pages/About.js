@@ -1,9 +1,7 @@
 import React from 'react'
 
-function about() {
-    return <div>
-        <h1>THIS IS THE ABOUT PAGE</h1>
-        </div>
+function AboutPage() {
+    return <div>THIS IS THE ABOUT PAGE</div>
 }
 
-export default about;
+export default AboutPage;

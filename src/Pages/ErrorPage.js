@@ -1,7 +1,7 @@
 import React from 'react'
 
-function error() {
+function PageError() {
     return <div>ERROR! PAGE NOT FOUND!</div>
 }
 
-export default error;
+export default PageError;
