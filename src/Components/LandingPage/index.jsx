@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function LandingComponents({name, alamat, jenisSayur}) {
+export default function LandingComponents({name, address, typeOfVegatables}) {
 
   return (
     <div>
       <p>{name}</p>
-      <p> {alamat}</p>
-      <p> {jenisSayur}</p>
+      <p>{address}</p>
+      <p>{typeOfVegatables}</p>
     </div>
   )
 }

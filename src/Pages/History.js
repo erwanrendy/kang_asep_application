@@ -16,31 +16,23 @@ import React from 'react'
 import {useState, useEffect} from 'react';
 // useState, berfungsi untuk penampungan data/variable/apapun yg akan diisi didalamnya dengan tipe data apapun
 // useEffect, berfungsi untuk merubah atau memberi effect pada kode, yg tidak memiliki fungsi utama didalam kode tersebut
-import LandingComponents from '../Components/LandingPage/index';
+
 
 function History() {
-    const [myName, setMyName]= useState('   ....')
-    // setMyName disini berfungsi untuk menggantikan 'bramjo' atau mengisi ( '...')
-    const [alamat, setAlamat]= useState('   ....')
-    const [jenisSayur, setJenisSayur]= useState ('   ....')
+    const [name, setName]= useState('')
+    // setName disini berfungsi untuk menggantikan 'bramjo' atau mengisi ( '...')
+    const [alamat, setAlamat]= useState('')
+    const [jenisSayur, setJenisSayur]= useState ('')
 
-    useEffect (
-        (myName) => {}
-    )
     function isiNama(e) {
-        setMyName(e.target.value)
+        setName(e.target.value) 
     }
 
-    useEffect (
-        (alamat) => {}
-    )
     function isiAlamat(e) {
         setAlamat(e.target.value)
     }
 
-    useEffect (
-        (jenisSayur) => {}
-    )
+
     function pilihSayur(e) {
         setJenisSayur(e.target.value)
     }
@@ -50,23 +42,33 @@ function History() {
             <h1>history Page</h1>
             <br></br>
 
-            <h1>Isi Nama Anda:
-            <input type='text' 
-                value={myName}
-                onChange={isiNama}/>
-            </h1>
-        
-            <h1>Isi Alamat Anda:
-            <input type='text'
-                value={alamat}
-                onChange={isiAlamat}/>
-            </h1>
+            <div>
+            <p>Isi Nama Anda: 
+                <input type='text' 
+                placeholder='isi nama anda!'
+                onChange={isiNama}/> </p>
+            </div>
+            <p>{name}</p>
 
-            <h1>Isi Jenis Sayur Anda:
-            <input type='text'
-                value={jenisSayur}
+            <div>
+                <p>Isi Alamat Anda: 
+                <input type='text'
+                placeholder='isi alamat anda!'
+                onChange={isiAlamat}/></p>
+            </div>
+            <p>{alamat}</p>
+
+            <div>
+                <p>Isi Jenis Sayur Anda:
+                <input type='text'
+                placeholder='isi jenis sayur anda!'
                 onChange={pilihSayur}/>
-            </h1>
+                </p>
+            </div>
+            <p>{jenisSayur}</p>
+
+            <button className="border rounded rounded-full px-4 bg-blue-200 text-red-900">SUBMIT</button>
+
         </div>
     )
     

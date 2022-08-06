@@ -5,10 +5,13 @@ import {useState, useEffect} from 'react';
 import LandingComponents from '../Components/LandingPage/index';
 
 function HomePage() {
-    const [myName, setMyName]= useState('')
+    const [myName, setMyName]= useState('bramjo')
     // setMyName disini berfungsi untuk menggantikan 'bramjo' atau mengisi ( '...')
-    const [alamat, setAlamat]= useState('')
-    const [jenisSayur, setJenisSayur]= useState ('')
+    const [alamat, setAlamat]= useState('bintaro')
+    const [jenisSayur, setJenisSayur]= useState ('kangkung')
+    useEffect(()=>
+        myName.length !== 0 ? console.log("a") : console.log("b")
+    )
     return (
     <div>THIS IS THE HOME PAGE
         <LandingComponents name={myName}/> 
@@ -18,12 +21,12 @@ function HomePage() {
 
         <LandingComponents address={alamat}/>
             <input type='text' className='text' placeholder='masukan alamat anda'
-                onChange={(e)=>setAlamat=>(e.target.value)}>
+                onChange={(e)=>setAlamat(e.target.value)}>
             </input>
 
         <LandingComponents typeOfVegatables={jenisSayur}/>
             <input type='text' className='text' placeholder='masukan jenis sayur'
-                onChange={(e)=>setJenisSayur=>(e.target.value)}>
+                onChange={(e)=>setJenisSayur(e.target.value)}>
             </input>
     </div>
     )

@@ -1,11 +1,11 @@
 import './App.css';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AboutPage from './Pages/About';
 import History from './Pages/History';
 import HomePage from './Pages/Home';
 import Profile from './Pages/Profile';
 import PageError from './Pages/ErrorPage';
-
 
 function App() {
   return (
